@@ -279,7 +279,7 @@ export default function SearchScreen() {
                     </Button>
                   </LinkContainer>
                 ))}
-              </div>    
+              </div>
             </>
           )}
         </Col>

@@ -40,7 +40,8 @@ export default function PlaceOrderScreen() {
   cart.itemsPrice = round2(
     cart.cartItems.reduce((a, c) => a + c.quantity * c.price, 0)
   );
-  cart.shippingPrice = cart.itemsPrice > 100 ? round2(0) : round2(10);
+  cart.shippingPrice =
+    cart.itemsPrice > 1000 ? round2(0) : round2(0.15 * cart.itemsPrice);
   cart.taxPrice = round2(0 * cart.itemsPrice);
   cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice;
 
@@ -182,6 +183,7 @@ export default function PlaceOrderScreen() {
                     >
                       Place Order
                     </Button>
+                    <p1>Shipping is free for items cost above $1000</p1>
                   </div>
                   {loading && <LoadingBox></LoadingBox>}
                 </ListGroup.Item>
