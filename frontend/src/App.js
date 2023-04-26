@@ -79,15 +79,16 @@ function App() {
               >
                 <i className="fas fa-bars"></i>
               </Button>
-
+              
               <LinkContainer to="/">
                 <Navbar.Brand>Autoparts-Guru</Navbar.Brand>
               </LinkContainer>
+              <SearchBox />
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
-                <SearchBox />
+               
                 <Nav className="me-auto w-100 justify-content-end">
-                  <a
+                <a
                     href="https://wa.me/+12407416949"
                     target="_blank"
                     rel="noopener noreferrer"
